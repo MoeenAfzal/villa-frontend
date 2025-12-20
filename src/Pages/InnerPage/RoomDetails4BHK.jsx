@@ -62,7 +62,7 @@ const RoomDetails4BHK = () => {
 
   try {
     // 2️⃣ CHECK AVAILABILITY FIRST
-    const calRes = await fetch("http://localhost:5000/api/calendar");
+    const calRes = await fetch("https://api-venue.corum8.com/api/calendar");
     const calText = await calRes.text();
 
     const data = ical.parseICS(calText);

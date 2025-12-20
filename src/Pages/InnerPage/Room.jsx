@@ -59,7 +59,7 @@ const Room = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/calendar");
+      const res = await fetch("https://api-venue.corum8.com/api/calendar");
       const text = await res.text();
 
       const data = ical.parseICS(text);
