@@ -18,7 +18,7 @@ const PaymentSuccess = () => {
     if (!bookingData) return Swal.fire("Error", "Booking data not found", "error");
 
     // Call backend to capture payment and send emails
-    fetch("https://api-venue.corum8.com/api/booking/payment-success", {
+    fetch("https://venue.corum8.com/api/booking/payment-success", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ orderID: token, bookingData }),

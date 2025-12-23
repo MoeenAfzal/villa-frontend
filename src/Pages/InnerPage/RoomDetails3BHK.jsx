@@ -62,7 +62,7 @@ const confirmBooking = async () => {
 
   try {
     // 2️⃣ CHECK AVAILABILITY FIRST
-    const calRes = await fetch("https://api-venue.corum8.com/api/calendar");
+    const calRes = await fetch("https://venue.corum8.com/api/calendar");
     const calText = await calRes.text();
 
     const data = ical.parseICS(calText);
@@ -114,7 +114,7 @@ const confirmBooking = async () => {
     });
 
     const response = await fetch(
-      "https://api-venue.corum8.com/api/booking/create-payment",
+      "https://venue.corum8.com/api/booking/create-payment",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
