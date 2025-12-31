@@ -553,12 +553,12 @@ const confirmBooking = async () => {
                         const outDate = new Date(checkOut);
                         const diffTime = Math.max(outDate - inDate, 0); // in ms
                         const nights = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) || 1;
-                        const pricePerNight = 500; // fallback price
+                        const pricePerNight = 1; // fallback price
                         const childrenCharge = (parseInt(children) || 0) * 2000; // 2000 per child
                         const total = pricePerNight * nights + childrenCharge;
                         return `₹${total} (${nights} night${nights > 1 ? "s" : ""}, ${children || 0} child over age of 5 ${children > 1 ? "ren" : ""})`;
                       }
-                      return `₹${500}`;
+                      return `₹${1}`;
                     })()}
                   </span>
                 </div>
